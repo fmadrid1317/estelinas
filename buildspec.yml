@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 12
+      nodejs: 14
     commands:
       - echo "Installing dependencies..."
       - npm install
@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - echo "Building Angular Project..." 
-      - ng build my-aws-project
+      - ng build
   post_build:
     commands:
       - echo "Updating files in the S3 bucket..."
