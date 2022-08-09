@@ -11,7 +11,7 @@ phases:
     commands:
       - echo "Building Angular Project..." 
       - ng build
-  post_buid:
+  post_build:
     commands:
       - echo "Updating files in the S3 bucket..."
       - aws s3 sync dist/my-aws-project/ s3://www.estelinasbuffet.com-bucket --delete
