@@ -15,6 +15,6 @@ import { PicturePageComponent } from './picture-page/picture-page.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, PicturePageComponent]
 })
 export class AppModule { }
