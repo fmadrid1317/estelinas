@@ -14,4 +14,4 @@ phases:
   post_build:
     commands:
       - echo "Updating files in the S3 bucket..."
-      - aws s3 cp dist s3://www.estelinasbuffet.com-bucket --recursive
+      - aws s3 sync dist/my-aws-project/ s3://www.estelinasbuffet.com-bucket --delete
