@@ -14,17 +14,17 @@ export class PicturePageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    $(document).ready(function($){
+    $(document).on('ready',function(){
       var timelines = $('.cd-horizontal-timeline'),
         eventsMinDistance = 60;
     
       (timelines.length > 0) && initTimeline(timelines);
     
       function initTimeline(this: any, timelines:any) {
-        const self = this;
+        var self = this;
         timelines.each(function(){
-          var timeline = $(self),
-            timelineComponents : {
+          var timeline = $(self);
+           var timelineComponents : {
               [key: string]: any
             } = {};
           //cache timeline components 
