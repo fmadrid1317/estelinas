@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import * as $ from 'jquery';
 
 
@@ -7,12 +7,12 @@ import * as $ from 'jquery';
   templateUrl: './picture-page.component.html',
   styleUrls: ['./picture-page.component.css']
 })
-export class PicturePageComponent implements OnInit {
+export class PicturePageComponent implements AfterViewInit {
 
   constructor() { 
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
 
     $(document).on('ready',function(){
       var timelines = $('.cd-horizontal-timeline'),
@@ -294,7 +294,7 @@ export class PicturePageComponent implements OnInit {
     
       function checkMQ() {
         //check if mobile or desktop device
-        return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline') as Element, '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
+        return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline') as HTMLElement, '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
       }
     });
     
