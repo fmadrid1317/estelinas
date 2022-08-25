@@ -25,7 +25,7 @@ export class PicturePageComponent implements OnInit {
         
   
       
-        function initTimeline(this: any, timelines:any) {
+        function initTimeline(this : any, timelines:any) {
           thisVar = this;
           timelines.each(function(){
             var timeline = $(thisVar);
